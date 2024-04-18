@@ -7,10 +7,8 @@ By Dhana Varadha
 # Description of the variables in config.yaml file
 
 | Variable Name | Default Value | Description |
-| --------------| ------------- | ----------- |
-
+| ---| --- | --- |
 | metadata name | mysite-config | metadata name |
- 
 | data PORT | 8000 | Port used | 
 | data STUDENT_NAME | Dhana | Username | 
 | data SITE_NAME | * | Any site name |
@@ -20,8 +18,7 @@ By Dhana Varadha
 # Description of the variables in secret.yaml
 
 | Variable Name | Default Value | Description |
-| --------------| ------------- | ----------- |
-
+| ---| --- | --- |
 | metadata name | mysite-secret | metadata name |  
 | SECRET_KEY | "this-is-a-bad-key" | secret key |
 
