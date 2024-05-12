@@ -26,6 +26,14 @@ By Dhana Varadha
 | POSTGRES_PASSWORD | "this-is-a-bad-password" | password |
 | POSTGRES_USER | mysiteuser | Postgres User |
 
+# Description of the variables in values-postgres.yaml
+
+| Variable Name | Default Value | Description |
+| --- | --- | --- |
+| username | mysiteuser | Username for Postgres database |
+| password | "this-is-a-bad-password" | Postgress password |
+| database | mysite | Database Name |
+
 # Deploy your Application
 # Make sure you are in the directory where the deployment directory is present
 kubectl apply -f deployment/
