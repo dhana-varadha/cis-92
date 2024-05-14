@@ -5,7 +5,7 @@ auth:
   username: mysiteuser
   password: this-is-a-bad-password
   database: mysite
-  postgresPassword: another-really-bad-password
+  postgresPassword: this-is-a-bad-password
 # GKE Autopilot requires requests and limits.
 primary:
   resources:

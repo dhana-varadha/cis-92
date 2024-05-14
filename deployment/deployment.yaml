@@ -15,15 +15,32 @@ spec:
       labels:
         function: app
     spec:
-      volumes:
-      - name: db
-        persistentVolumeClaim:
-          claimName: mysite-data
       containers:
       - name: django
         image: ghcr.io/dhana-varadha/cis-92:milestone-6.1
         ports:
         - containerPort: 8000
+
+        livenessProbe:
+          httpGet:
+           path: /
+           port: 8000
+           httpHeaders:
+           - name: host
+             value: localhost  
+          failureThreshold: 2
+          periodSeconds: 10
+
+        startupProbe:
+          httpGet:
+            path: /
+            port: 8000
+            httpHeaders:
+            - name: host
+              value: localhost
+          failureThreshold: 30
+          periodSeconds: 10
+
         resources:
           requests:
             cpu: 250m
@@ -38,6 +55,3 @@ spec:
             name: mysite-config
         - secretRef:
             name: mysite-secret
-        volumeMounts:
-        - name: db
-          mountPath: /data
